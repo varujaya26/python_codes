@@ -1,0 +1,68 @@
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+#Write your code below this line 👇
+import random
+
+
+value = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for scissors. \n"))
+
+def game(value):
+    if value == 0:
+        print(rock)
+    elif value == 1:
+        print(paper)
+    elif value == 2:
+        print(scissors)
+    else:
+        print ("Invalid option")
+
+
+print(game(value))
+print("Computer chose: \n")
+comp_value = random.randint(0, 2)
+print(game(comp_value))
+# code to decide wining team
+
+if value == 0 and comp_value == 0:
+   print("Nobody wins, It is a draw")
+elif value == 0 and comp_value == 1:
+   print("You won")
+elif value == 0 and comp_value == 2:
+   print("You won") 
+elif value == 1 and comp_value == 0:
+   print("You won")
+elif value == 1 and comp_value == 1:
+   print("Nobody wins, It is a draw")
+elif value == 1 and comp_value == 2:
+   print("Computer won")
+elif value == 2 and comp_value == 0:
+   print("Computer won")
+elif value == 2 and comp_value == 1:
+   print("You won")
+elif value == 2 and comp_value == 2:
+   print("Nobody wins, It is a draw")

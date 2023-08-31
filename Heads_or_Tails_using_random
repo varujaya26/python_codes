@@ -1,0 +1,9 @@
+#code to print Heads or Tails using random module
+import random
+
+random_num = random.randint(0, 1)
+# print(random_num)
+if random_num == 0:
+    print("Tails")
+else:
+    print("Heads")
